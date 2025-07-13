@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="548.0" prefWidth="724.0" style="-fx-background-color: linear-gradient(to bottom, #001F3F, #003366);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+   
+       <!-- Label Bahasa -->
+       <Label fx:id="languageLabel" layoutX="400.0" layoutY="19.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 13px;" text="%language" />
+   
+       <!-- ComboBox Bahasa -->
+       <ComboBox fx:id="languageComboBox" layoutX="506.0" layoutY="19.0" prefWidth="150" />
+   
+       <!-- Kontainer Utama -->
+       <HBox layoutX="50.0" layoutY="80.0" spacing="40">
+           <children>
+   
+               <!-- Kolom Kiri: Selamat Datang dan Gambar -->
+               <VBox alignment="CENTER" spacing="20">
+                   <children>
+                       <Label fx:id="welcomeLabel" alignment="CENTER" maxWidth="250" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" text="%welcome.calculator" wrapText="true" />
+   
+                       <ImageView fitHeight="300" fitWidth="260">
+                           <image>
+                               <Image url="@../assets/img/login.png" />
+                           </image>
+                       </ImageView>
+                   </children>
+               </VBox>
+   
+               <!-- Kolom Kanan: Form Login -->
+               <VBox prefHeight="377.0" prefWidth="306.0" spacing="15" style="-fx-background-color: white;                          -fx-padding: 25px;                          -fx-background-radius: 15;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 12, 0, 0, 6);">
+                   <children>
+   
+                       <Label fx:id="titleLabel" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #003366;" text="%login.title" />
+   
+                       <Label fx:id="usernameLabel" style="-fx-font-weight: bold; -fx-text-fill: #003366;" text="%username" />
+                       <TextField fx:id="usernameField" prefWidth="250" style="-fx-background-radius: 8;" />
+   
+                       <Label fx:id="passwordLabel" style="-fx-font-weight: bold; -fx-text-fill: #003366;" text="%password" />
+                       <PasswordField fx:id="passwordField" prefWidth="250" style="-fx-background-radius: 8;" />
+   
+                       <Button fx:id="loginButton" onAction="#handleLogin" prefWidth="250" style="-fx-background-color: #28a745;                                    -fx-text-fill: white;                                    -fx-font-weight: bold;                                    -fx-background-radius: 8;" text="%login" />
+   
+                       <Button fx:id="signupButton" onAction="#goToSignup" prefWidth="250" style="-fx-background-color: #003366;                                    -fx-text-fill: white;                                    -fx-font-weight: bold;                                    -fx-background-radius: 8;" text="%signup" />
+   
+                   </children>
+               </VBox>
+   
+           </children>
+       </HBox>
+   </children>
+
+</AnchorPane>
